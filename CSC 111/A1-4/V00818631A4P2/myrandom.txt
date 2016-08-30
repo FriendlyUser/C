@@ -1,0 +1,12 @@
+Table of random number for drawing geometric shapes in different colours, sizes and opacities
+    shape#     RSCE     x     y     width     height     red     green     blue      opacity
+         0        3    539   175      75        19         18     185       127       0.62
+         1        2    471   337      31        20         71      44       221       0.29
+         2        2    509   341       5         1        130     184       181       0.71
+         3        3    207    48      67        30        235      93       148       0.02
+         4        2    483   138      51        15        240      27       168       0.76
+         5        2    427    41      46        35        216      35        65       0.47
+         6        1    521   234      60        12         20     125        57       0.34
+         7        2    215   120      29         2        132      17        65       0.99
+         8        0    214   324      59        38         48     103       222       0.50
+         9        1    654   367      27         4        218     178        20       0.50
