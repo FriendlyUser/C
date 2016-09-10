@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +63,11 @@ namespace MatchingGame
                     icons.RemoveAt(randomNumber);
                 }
             }
+            DateTime startTime;
+            startTime = DateTime.Now;
+            timer2.Tick += (s, ev) => { mylabel.Text = String.Format("{0:00}", (DateTime.Now - startTime).Seconds); };
+            timer2.Interval = 100;       // every 1/10 of a second
+            timer2.Start();
         }
         /// <summary>
         /// Every label's Click event is handled by this event handler
@@ -104,7 +109,16 @@ namespace MatchingGame
                 // Set its color to black
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
-
+                CheckForWinner();
+                //If the player clicked two matching icons, keep them
+                // black and reset firstClicked and secondClicked
+                // so the player can click another icon
+                if (firstClicked.Text == secondClicked.Text)
+                {
+                    firstClicked = null;
+                    secondClicked = null;
+                    return;
+                }
                 // If the player gets this far, the player
                 // clicked two different icons, so start the 
                 // timer (which will wait three quarters of 
@@ -127,6 +141,39 @@ namespace MatchingGame
             // clicked, the program knows it's the first click
             firstClicked = null;
             secondClicked = null;
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            mylabel.Text = timer2.ToString();
+        }
+        // Check every icon to see if it is matched, by
+        // comparing its foreground to its background color.
+        // If all of the icons are matched, the player wins
+        private void CheckForWinner()
+        {
+            // GO through all of the labels in the TableLayoutPanel,
+            // checking each one to see if is icon is matched
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                Label iconLabel = control as Label;
+
+                if (iconLabel != null)
+                {
+                    if (iconLabel.ForeColor == iconLabel.BackColor)
+                        return;
+                }
+            }
+
+            // IF the loop didn't return, it didn't find
+            // any unmatched icons
+            // That means the user won. Show a message and close the form
+            timer2.Stop();
+            MessageBox.Show("You matched all the icons!", "Congratulations");
+            Close();
+        }
+        private void timer2_Tick_1(object sender, EventArgs e)
+        {
+            mylabel.Text = timer2.ToString();
         }
     }
 }
