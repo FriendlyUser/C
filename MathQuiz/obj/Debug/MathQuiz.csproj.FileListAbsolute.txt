@@ -1,9 +1,0 @@
-c:\users\wu\documents\visual studio 2015\Projects\MathQuiz\MathQuiz\bin\Debug\MathQuiz.exe.config
-c:\users\wu\documents\visual studio 2015\Projects\MathQuiz\MathQuiz\bin\Debug\MathQuiz.exe
-c:\users\wu\documents\visual studio 2015\Projects\MathQuiz\MathQuiz\bin\Debug\MathQuiz.pdb
-c:\users\wu\documents\visual studio 2015\Projects\MathQuiz\MathQuiz\obj\Debug\MathQuiz.csprojResolveAssemblyReference.cache
-c:\users\wu\documents\visual studio 2015\Projects\MathQuiz\MathQuiz\obj\Debug\MathQuiz.Form1.resources
-c:\users\wu\documents\visual studio 2015\Projects\MathQuiz\MathQuiz\obj\Debug\MathQuiz.Properties.Resources.resources
-c:\users\wu\documents\visual studio 2015\Projects\MathQuiz\MathQuiz\obj\Debug\MathQuiz.csproj.GenerateResource.Cache
-c:\users\wu\documents\visual studio 2015\Projects\MathQuiz\MathQuiz\obj\Debug\MathQuiz.exe
-c:\users\wu\documents\visual studio 2015\Projects\MathQuiz\MathQuiz\obj\Debug\MathQuiz.pdb
